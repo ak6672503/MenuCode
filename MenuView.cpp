@@ -27,6 +27,7 @@ BEGIN_MESSAGE_MAP(CMenuView, CView)
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+//	ON_COMMAND(IDM_TEST, &CMenuView::OnTest)
 END_MESSAGE_MAP()
 
 // CMenuView 构造/析构
@@ -103,3 +104,11 @@ CMenuDoc* CMenuView::GetDocument() const // 非调试版本是内联的
 
 
 // CMenuView 消息处理程序
+
+
+//void CMenuView::OnTest()
+//{
+//
+//	AfxMessageBox(L"View Clicked");//cmenuapp和doc都不是cwnd类派生的，所以没有messagebox成员 只能用全局messagebox函数
+//
+//}

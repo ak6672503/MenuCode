@@ -20,12 +20,13 @@
 // CMenuApp
 
 BEGIN_MESSAGE_MAP(CMenuApp, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CMenuApp::OnAppAbout)
+//	ON_COMMAND(ID_APP_ABOUT, &CMenuApp::OnAppAbout)
 	// 基于文件的标准文档命令
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 	// 标准打印设置命令
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinApp::OnFilePrintSetup)
+	ON_COMMAND(IDM_TEST, &CMenuApp::OnTest)
 END_MESSAGE_MAP()
 
 
@@ -171,13 +172,21 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // 用于运行对话框的应用程序命令
-void CMenuApp::OnAppAbout()
-{
-	CAboutDlg aboutDlg;
-	aboutDlg.DoModal();
-}
+//void CMenuApp::OnAppAbout()
+//{
+//	CAboutDlg aboutDlg;
+//	aboutDlg.DoModal();
+//}
 
 // CMenuApp 消息处理程序
 
 
 
+
+
+//void CMenuApp::OnTest()
+//{
+//	// TODO: 在此添加命令处理程序代码
+//	//AfxMessageBox(L"App Clicked");//cmenuapp和doc都不是cwnd类派生的，所以没有messagebox成员 只能用全局messagebox函数
+//
+//}

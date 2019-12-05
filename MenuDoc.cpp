@@ -23,6 +23,7 @@
 IMPLEMENT_DYNCREATE(CMenuDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CMenuDoc, CDocument)
+//	ON_COMMAND(IDM_TEST, &CMenuDoc::OnTest)
 END_MESSAGE_MAP()
 
 
@@ -136,3 +137,11 @@ void CMenuDoc::Dump(CDumpContext& dc) const
 
 
 // CMenuDoc 命令
+
+
+//void CMenuDoc::OnTest()
+//{
+//	// TODO: 在此添加命令处理程序代码
+//	AfxMessageBox(L"Doc Clicked");//cmenuapp和doc都不是cwnd类派生的，所以没有messagebox成员 只能用全局messagebox函数
+//
+//}

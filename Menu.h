@@ -26,8 +26,9 @@ public:
 	virtual int ExitInstance();
 
 // 实现
-	afx_msg void OnAppAbout();
+//	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
+	afx_msg void OnTest();
 };
 
 extern CMenuApp theApp;
