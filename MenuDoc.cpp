@@ -136,12 +136,3 @@ void CMenuDoc::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 
-// CMenuDoc 命令
-
-
-//void CMenuDoc::OnTest()
-//{
-//	// TODO: 在此添加命令处理程序代码
-//	AfxMessageBox(L"Doc Clicked");//cmenuapp和doc都不是cwnd类派生的，所以没有messagebox成员 只能用全局messagebox函数
-//
-//}

@@ -26,7 +26,6 @@ BEGIN_MESSAGE_MAP(CMenuApp, CWinApp)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 	// 标准打印设置命令
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinApp::OnFilePrintSetup)
-	ON_COMMAND(IDM_TEST, &CMenuApp::OnTest)
 END_MESSAGE_MAP()
 
 
@@ -184,9 +183,4 @@ END_MESSAGE_MAP()
 
 
 
-//void CMenuApp::OnTest()
-//{
-//	// TODO: 在此添加命令处理程序代码
-//	//AfxMessageBox(L"App Clicked");//cmenuapp和doc都不是cwnd类派生的，所以没有messagebox成员 只能用全局messagebox函数
-//
-//}
+

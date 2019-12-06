@@ -6,8 +6,8 @@
 #define IDP_OLE_INIT_FAILED             100
 #define IDR_MAINFRAME                   128
 #define IDR_MenuTYPE                    130
-#define ID_TEST                         32771
-#define IDM_TEST                        32772
+#define IDM_Test                        32771
+#define ID_TEST                         32772
 
 // Next default values for new objects
 // 

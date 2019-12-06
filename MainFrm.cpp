@@ -18,7 +18,7 @@ IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
 
 BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_WM_CREATE()
-	ON_COMMAND(IDM_TEST, &CMainFrame::OnTest)
+	ON_COMMAND(IDM_Test, &CMainFrame::OnTest)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -93,12 +93,8 @@ void CMainFrame::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 
-// CMainFrame 消息处理程序
-
-
-
 void CMainFrame::OnTest()
 {
-	MessageBox(L"MainFrame Clicked");
+	MessageBox(L"asdasdasd");
 
 }
