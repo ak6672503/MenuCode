@@ -211,6 +211,7 @@
     <None Include="res\Menu.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\bitmap1.bmp" />
     <Image Include="res\Menu.ico" />
     <Image Include="res\MenuDoc.ico" />
     <Image Include="res\Toolbar.bmp" />

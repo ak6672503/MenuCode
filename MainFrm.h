@@ -1,4 +1,4 @@
-﻿
+﻿#include"resource.h"
 // MainFrm.h: CMainFrame 类的接口
 //
 
@@ -11,6 +11,8 @@ protected: // 仅从序列化创建
 	CMainFrame() noexcept;
 	DECLARE_DYNCREATE(CMainFrame)
 
+private:
+	CBitmap m_bitmap;
 // 特性
 public:
 

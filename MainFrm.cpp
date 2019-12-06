@@ -65,6 +65,13 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	DockControlBar(&m_wndToolBar);
 
 
+	GetMenu()->GetSubMenu(0)->CheckMenuItem(0, MF_BYPOSITION | MF_CHECKED);
+	//GetMenu()->GetSubMenu(0)->CheckMenuItem(ID_FILE_NEW, MF_BYPOSITION | MF_UNCHECKED);
+	GetMenu()->GetSubMenu(0)->SetDefaultItem(1, TRUE);
+
+	m_bitmap.LoadBitmap(IDB_BITMAP1);
+	GetMenu()->GetSubMenu(0)->SetMenuItemBitmaps(0, MF_BYPOSITION, &m_bitmap, &m_bitmap);
+
 	return 0;
 }
 
