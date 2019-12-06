@@ -33,7 +33,8 @@ static UINT indicators[] =
 
 CMainFrame::CMainFrame() noexcept
 {
-	// TODO: 在此添加成员初始化代码
+	//m_bAutoMenuEnable = FALSE; mfc自带的管理菜单
+
 }
 
 CMainFrame::~CMainFrame()
@@ -65,12 +66,16 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	DockControlBar(&m_wndToolBar);
 
 
-	GetMenu()->GetSubMenu(0)->CheckMenuItem(0, MF_BYPOSITION | MF_CHECKED);
-	//GetMenu()->GetSubMenu(0)->CheckMenuItem(ID_FILE_NEW, MF_BYPOSITION | MF_UNCHECKED);
-	GetMenu()->GetSubMenu(0)->SetDefaultItem(1, TRUE);
+	//GetMenu()->GetSubMenu(0)->CheckMenuItem(0, MF_BYPOSITION | MF_CHECKED);
+	////GetMenu()->GetSubMenu(0)->CheckMenuItem(ID_FILE_NEW, MF_BYPOSITION | MF_UNCHECKED);
+	//GetMenu()->GetSubMenu(0)->SetDefaultItem(1, TRUE);
 
-	m_bitmap.LoadBitmap(IDB_BITMAP1);
-	GetMenu()->GetSubMenu(0)->SetMenuItemBitmaps(0, MF_BYPOSITION, &m_bitmap, &m_bitmap);
+	//m_bitmap.LoadBitmap(IDB_BITMAP1);
+	//GetMenu()->GetSubMenu(0)->SetMenuItemBitmaps(0, MF_BYPOSITION, &m_bitmap, &m_bitmap);
+
+
+
+	GetMenu()->GetSubMenu(0)->EnableMenuItem(1, MF_BYPOSITION | MF_DISABLED);
 
 	return 0;
 }
