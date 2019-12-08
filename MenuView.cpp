@@ -28,6 +28,8 @@ BEGIN_MESSAGE_MAP(CMenuView, CView)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
 //	ON_COMMAND(IDM_TEST, &CMenuView::OnTest)
+ON_WM_RBUTTONDOWN()
+//ON_COMMAND(IDM_SHOW, &CMenuView::OnShow)
 END_MESSAGE_MAP()
 
 // CMenuView 构造/析构
@@ -106,3 +108,24 @@ CMenuDoc* CMenuView::GetDocument() const // 非调试版本是内联的
 // CMenuView 消息处理程序
 
 
+
+
+void CMenuView::OnRButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+
+	CMenu menu;
+	menu.LoadMenuW(IDR_MENU1);
+	CMenu* pPopup = menu.GetSubMenu(0);
+	ClientToScreen(&point);
+	pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, GetParent());
+
+	CView::OnRButtonDown(nFlags, point);
+}
+
+//
+//void CMenuView::OnShow()
+//{
+//	// TODO: 在此添加命令处理程序代码
+//	//MessageBox(L"view show");
+//}

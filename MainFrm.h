@@ -43,6 +43,8 @@ protected:
 public:
 //	afx_msg void OnTest();
 	afx_msg void OnTest();
+	afx_msg void OnUpdateEditCut(CCmdUI* pCmdUI);
+	afx_msg void OnShow();
 };
 
 
